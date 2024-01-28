@@ -28,7 +28,7 @@ function Home() {
         <h1 className="text-focus-in scroll-m-20 text-7xl font-extrabold tracking-tight lg:text-9xl">
           Hello, Welcome to the Joke Hub
         </h1>
-        <h2 className="w-1/2 mx-auto  scroll-m-20 border-b pb-2 pt-8 mt-10 text-3xl font-semibold tracking-tight first:mt-0">
+        <h2 className="w-1/2 mx-auto  scroll-m-20 border-b pb-2 pt-8 mt-10 text-3xl font-semibold tracking-tight first:mt-0 ">
           A place for people to share and read jokes
         </h2>
       </main>
@@ -36,7 +36,7 @@ function Home() {
         <DailyJokes />
       </section>
     </>
-  );  
+  );
 }
 
 export default Home;

@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 // import supabase from "../config/supabaseClient";
 import MyJokes from "./pages/MyJokes";
 import UpdateJoke from "./pages/UpdateJoke";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/app" element={<ApplicationPage />} />
         <Route path="/myjokes" element={<MyJokes />} />
         <Route path="/myjokes/:id" element={<UpdateJoke />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </ThemeProvider>
   );

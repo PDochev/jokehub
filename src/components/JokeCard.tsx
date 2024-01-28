@@ -51,7 +51,7 @@ function JokeCard({ joke, onDelete }) {
   };
 
   return (
-    <div className="mx-auto border rounded-lg shadow-sm mt-7 p-10 mb-7">
+    <div className="w-3/12 mx-auto border rounded-lg shadow-sm mt-7 p-10 mb-7">
       <div className="flex flex-col justify-center items-center">
         <CardHeader className="text-sm text-muted-foreground">
           Category: {joke.category}

@@ -51,7 +51,7 @@ function MyJokes() {
           </div>
         </Navbar>
       </nav>
-      <section className="w-3/12  mx-auto mt-12 items-center justify-center">
+      <section className="w-3/4 flex  flex-wrap gap-5  mx-auto mt-12">
         {fetchError && <p>{fetchError}</p>}
         {jokes && (
           <>

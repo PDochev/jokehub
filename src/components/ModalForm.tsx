@@ -21,8 +21,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { useState, useEffect } from "react";
 import supabase from "../config/supabaseClient";
 import { useNavigate } from "react-router-dom";
+import { Toaster } from "@/components/ui/toaster";
+import { useToast } from "@/components/ui/use-toast";
 
 function ModalForm() {
+  const { toast } = useToast();
   const navigate = useNavigate();
   const [joke, setJoke] = useState("");
   const [category, setCategory] = useState("");
@@ -30,7 +33,7 @@ function ModalForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    e.stopPropagation();
+    // e.stopPropagation();
 
     if (!joke || !category) {
       setFormError("Please fill out all fields");
@@ -40,6 +43,9 @@ function ModalForm() {
       .from("makemelaugh")
       .insert([{ joke, category }]);
     navigate("/myjokes");
+    toast({
+      description: "Your joke has been added.",
+    });
 
     if (error) {
       console.log(error);
