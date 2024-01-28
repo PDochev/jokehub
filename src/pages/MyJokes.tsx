@@ -4,13 +4,19 @@ import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ModeToggle } from "@/components/Mode-toggle";
+import { ModeToggle } from "@/components/ui/mode-toggle";
+
+// type Joke = {
+//   id: string;
+//   joke: string;
+//   category:
+// };
 
 function MyJokes() {
   const [jokes, setJokes] = useState([]);
   const [fetchError, setFetchError] = useState(null);
 
-  const handleDelete = (id) => {
+  const handleDelete = (id: string) => {
     setJokes((prevJoke) => prevJoke.filter((joke) => joke.id !== id));
   };
 

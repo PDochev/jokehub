@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+
 function NotFound() {
   return (
     <main className="container mx-auto mt-12 flex flex-col items-center justify-center">

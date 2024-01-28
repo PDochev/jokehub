@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
-import { ModeToggle } from "@/components/Mode-toggle";
+import { ModeToggle } from "@/components/ui/mode-toggle";
 import { Link } from "react-router-dom";
 import { Home } from "lucide-react";
 import JokesSearch from "@/components/JokesSearch";

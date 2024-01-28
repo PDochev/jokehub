@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
-import { ModeToggle } from "@/components/Mode-toggle";
+import { ModeToggle } from "@/components/ui/mode-toggle";
 import { Link } from "react-router-dom";
 import supabase from "../config/supabaseClient";
 import { useNavigate, useParams } from "react-router-dom";

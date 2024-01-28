@@ -1,5 +1,5 @@
 import ApplicationPage from "./pages/ApplicationPage";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/components/ui/theme-provider";
 import Home from "./pages/Home";
 import { Routes, Route } from "react-router-dom";
 // import supabase from "../config/supabaseClient";
