@@ -1,6 +1,18 @@
 import { Button } from "./ui/button";
 
-function Jokes({ joke, isOpen, toggleOpenState }) {
+type Joke = {
+  category: string;
+  setup: string;
+  delivery: string;
+};
+
+type JokesProps = {
+  joke: Joke;
+  isOpen: boolean;
+  toggleOpenState: () => void;
+};
+
+function Jokes({ joke, isOpen, toggleOpenState }: JokesProps) {
   return (
     <div className="w-full md:w-4/5 lg:w-4/5 mx-auto border rounded-lg shadow-sm  mt-7 p-8 lg:p-16 ">
       <div className="flex flex-col justify-center items-center">

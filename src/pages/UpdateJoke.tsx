@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import supabase from "../config/supabaseClient";
 import { useNavigate, useParams } from "react-router-dom";
 import { Textarea } from "@/components/ui/textarea";
-import { Toaster } from "@/components/ui/toaster";
 import { useToast } from "@/components/ui/use-toast";
 
 import {
@@ -23,7 +22,7 @@ function UpdateJoke() {
   const navigate = useNavigate();
   const [jokes, setJokes] = useState("");
   const [category, setCategory] = useState("");
-  const [formError, setFormError] = useState(null);
+  const [formError, setFormError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchJoke = async () => {
@@ -51,7 +50,7 @@ function UpdateJoke() {
     fetchJoke();
   }, [id, navigate]);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!jokes || !category) {

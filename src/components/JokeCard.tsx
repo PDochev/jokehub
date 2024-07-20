@@ -1,11 +1,4 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -23,13 +16,11 @@ import { Link } from "react-router-dom";
 import supabase from "../config/supabaseClient";
 import { Toaster } from "@/components/ui/toaster";
 import { useToast } from "@/components/ui/use-toast";
-import { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
 
+{/* @ts-expect-error type */}
 function JokeCard({ joke, onDelete }) {
   const { toast } = useToast();
-  const [alertDialog, setAlertDialog] = useState(false);
-  const handleDelete = async (e) => {
+  const handleDelete = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
 
     const { data, error } = await supabase

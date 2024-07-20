@@ -7,8 +7,8 @@ import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 
 function MyJokes() {
-  const [jokes, setJokes] = useState([]);
-  const [fetchError, setFetchError] = useState(null);
+  const [jokes, setJokes] = useState<{ id: string }[]>([]);
+  const [fetchError, setFetchError] = useState<string | null>(null);
 
   const handleDelete = (id: string) => {
     setJokes((prevJoke) => prevJoke.filter((joke) => joke.id !== id));
@@ -51,7 +51,7 @@ function MyJokes() {
           </div>
         </Navbar>
       </nav>
-      <h1 className="text-4xl font-bold text-center mt-10">My Jokes</h1>
+      <h1 className="text-4xl font-bold text-center mt-8">My Jokes</h1>
       <section className="w-4/5 mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
         {fetchError && <p>{fetchError}</p>}
         {jokes && (

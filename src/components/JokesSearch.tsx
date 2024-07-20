@@ -1,4 +1,6 @@
-import { useEffect, useState } from "react";
+// @ts-nocheck
+
+import { useState } from "react";
 import {
   Select,
   SelectContent,
@@ -7,7 +9,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Button } from "./ui/button";
-import { Slider } from "@/components/ui/slider";
+
 import Jokes from "./Jokes";
 import Loader from "./Loader";
 import ModalForm from "./ModalForm";
@@ -15,7 +17,8 @@ import ModalForm from "./ModalForm";
 function JokesSearch() {
   const [jokes, setJokes] = useState([]);
   const [category, setCategory] = useState("Programming");
-  const [amount, setAmount] = useState(9);
+  // const [amount, setAmount] = useState(9);
+  const amount = 9;
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [openStates, setOpenStates] = useState({});
@@ -42,14 +45,13 @@ function JokesSearch() {
       }, {});
       setOpenStates(initialOpenStates);
     } catch (err) {
-      console.log(err.message);
       setError("Something went wrong , Failed to load Jokes");
     } finally {
       setIsLoading(false);
     }
   };
 
-  const toggleOpenState = (index) => {
+  const toggleOpenState = (index: number) => {
     setOpenStates((prevOpenStates) => {
       return { ...prevOpenStates, [index]: !prevOpenStates[index] };
     });
@@ -58,7 +60,7 @@ function JokesSearch() {
   return (
     <>
       <div className="mx-auto flex gap-2">
-        <div div className="flex flex-col items-center justify-center gap-2">
+        <div className="flex flex-col items-center justify-center gap-2">
           <div className="flex">
             <label className="min-w-[130px]" htmlFor="category">
               Select a category

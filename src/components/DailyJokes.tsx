@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
 
 function DailyJokes() {
-  const [jokes, setJokes] = useState([]);
+  const [jokes, setJokes] = useState<{ setup: string; delivery: string }>({
+    setup: "",
+    delivery: "",
+  });
 
   useEffect(() => {
     async function fetchData() {
@@ -20,7 +23,7 @@ function DailyJokes() {
       <h3 className="focus-in-expand  text-center scroll-m-20 text-4xl font-semibold tracking-tight">
         Joke of the Day
       </h3>
-      {/* @ts-expect-error type */}
+
       <p className="leading-7 text-xl text-center [&:not(:first-child)]:mt-6">
         {jokes.setup}
       </p>
