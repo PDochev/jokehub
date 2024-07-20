@@ -16,11 +16,14 @@ function DailyJokes() {
   }, []);
 
   return (
-    <div className=" flex flex-col items-center justify-center rounded gap-3 mt-12 p-10 ">
-      <h3 className="focus-in-expand  scroll-m-20 text-4xl font-semibold tracking-tight">
+    <div className=" flex flex-col items-center justify-center rounded gap-3 mt-12 p-8 ">
+      <h3 className="focus-in-expand  text-center scroll-m-20 text-4xl font-semibold tracking-tight">
         Joke of the Day
       </h3>
-      <p className="leading-7 [&:not(:first-child)]:mt-6">{jokes.setup}</p>
+      {/* @ts-expect-error type */}
+      <p className="leading-7 text-xl text-center [&:not(:first-child)]:mt-6">
+        {jokes.setup}
+      </p>
       <p className="border-b font-bold leading-7 [&:not(:first-child)]:mt-6">
         {jokes.delivery}
       </p>

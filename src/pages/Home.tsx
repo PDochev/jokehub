@@ -25,14 +25,14 @@ function Home() {
         </Navbar>
       </nav>
       <main className="container mx-auto mt-12 flex flex-col items-center justify-center">
-        <h1 className="text-focus-in scroll-m-20 text-7xl font-extrabold tracking-tight lg:text-9xl">
+        <h1 className="text-focus-in scroll-m-20 md:text-center lg:text-center text-7xl font-extrabold tracking-tight lg:text-9xl">
           Hello, Welcome to the Joke Hub
         </h1>
-        <h2 className="w-1/2 mx-auto  scroll-m-20 border-b pb-2 pt-8 mt-10 text-3xl font-semibold tracking-tight first:mt-0 ">
+        <h2 className="w-3/4 mx-auto text-center  scroll-m-20 border-b pb-2 pt-8 mt-10 text-3xl font-semibold tracking-tight first:mt-0 ">
           A place for people to share and read jokes
         </h2>
       </main>
-      <section className="w-1/3  mx-auto ">
+      <section className="w-3/4 mx-auto mb-8 ">
         <DailyJokes />
       </section>
     </>

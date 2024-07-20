@@ -51,14 +51,14 @@ function JokeCard({ joke, onDelete }) {
   };
 
   return (
-    <div className="w-3/12 mx-auto border rounded-lg shadow-sm mt-7 p-10 mb-7">
+    <div className="w-full md:w-4/5 lg:w-4/5 mx-auto border rounded-lg shadow-md  mt-7 p-8 lg:p-16 ">
       <div className="flex flex-col justify-center items-center">
-        <CardHeader className="text-sm text-muted-foreground">
+        <CardHeader className="text-sm text-center text-muted-foreground">
           Category: {joke.category}
         </CardHeader>
-        <CardContent>{joke.joke}</CardContent>
+        <CardContent className="text-center">{joke.joke}</CardContent>
       </div>
-      <CardFooter className="flex justify-evenly ">
+      <CardFooter className="flex flex-row items-center justify-center gap-4">
         <Link to={"/myjokes/" + joke.id}>
           <Button variant="outline">Edit</Button>
         </Link>
@@ -66,7 +66,7 @@ function JokeCard({ joke, onDelete }) {
           <AlertDialogTrigger asChild>
             <Button variant="destructive">Delete</Button>
           </AlertDialogTrigger>
-          <AlertDialogContent>
+          <AlertDialogContent className="w-3/4 rounded">
             <AlertDialogHeader>
               <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
               <AlertDialogDescription>

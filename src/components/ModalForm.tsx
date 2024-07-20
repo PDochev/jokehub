@@ -63,7 +63,7 @@ function ModalForm() {
         <Button variant="outline">+ New Joke</Button>
       </DialogTrigger>
 
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className=" w-3/4 rounded md:w-1/2 lg:w-1/2 mx-auto">
         <form onSubmit={handleSubmit}>
           <DialogHeader>
             <DialogTitle>Insert new Joke</DialogTitle>

@@ -102,7 +102,7 @@ function UpdateJoke() {
         </Navbar>
       </nav>
 
-      <section className="w-1/3  mx-auto border rounded-lg shadow-sm mt-7 p-10 mb-7 ">
+      <section className="w-3/4 md:w-3/5 lg:w-2/5  mx-auto border rounded-lg shadow-sm mt-7 p-8 mb-7 ">
         <h1>Update Your Joke</h1>
         <form onSubmit={handleSubmit} className="grid gap-4 py-4">
           <Textarea
